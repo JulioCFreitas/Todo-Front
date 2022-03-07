@@ -34,5 +34,13 @@ export class ReadAllComponent implements OnInit {
     })
   }
 
+  delete(id: any): void {
+   this.service.delete(id).subscribe((resposta) =>{
+     if(resposta === null){
+        this.service.message('Task delete sucess!')
+     }
+   }) 
+  }
+
 
 }
