@@ -19,7 +19,7 @@ export class TodoService {
   }
 
   delete(id: any): Observable<void>{
-    const url= `${this.baseUrl}/${id}`
+    const url = `${this.baseUrl}/${id}`
     return this.http.delete<void>(url);
   }
 
